@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longest Word Finder</title>
+</head>
+
+<body>
+    <script>
+        function findLongestWord(str) {
+            let words = str.split(" ") // array içerisinde kelimeleri kesti
+            let longestWord = " "
+            words.forEach((word) => {
+                if (word.length > longestWord.length) {
+                    longestWord = word;
+                }
+            })
+            let h1Element = document.createElement("h1");
+            h1Element.textContent = longestWord
+            document.body.appendChild(h1Element)
+            return longestWord
+        }
+        console.log(findLongestWord("Buddy i have to go to the theathre"))
+
+        function myFunction(obj) {
+            return obj.country
+        }
+
+        console.log(myFunction({continent: 'Asia', country: 'Japan'}))
+        console.log(myFunction({country: 'Sweden', continent: 'Europa'}))
+    </script>
+</body>
+
+</html>
